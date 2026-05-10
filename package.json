@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "node src/backend/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "fs-extra": "^11.3.5"
+  }
+}
