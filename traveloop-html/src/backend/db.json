@@ -1,0 +1,51 @@
+{
+  "places": {
+    "paris": {
+      "name": "Paris, France",
+      "duration": "5 Days / 4 Nights",
+      "description": "Experience the magic of the City of Light. Paris offers world-class art, incredible architecture, and unforgettable culinary experiences along the Seine river.",
+      "images": [
+        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=800&q=80"
+      ],
+      "highlights": ["Eiffel Tower", "Louvre Museum", "Notre-Dame Cathedral", "Montmartre", "Palace of Versailles"],
+      "plans": ["Romantic Paris Break", "EuroTrip: The Classic Route"]
+    },
+    "tokyo": {
+      "name": "Tokyo, Japan",
+      "duration": "8 Days / 7 Nights",
+      "description": "A dazzling mix of neon-lit skyscrapers and historic traditional temples. Tokyo is a sensory overload of incredible food and technology.",
+      "images": [
+        "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80"
+      ],
+      "highlights": ["Shibuya Crossing", "Senso-ji Temple", "Tokyo Skytree", "Meiji Shrine", "Tsukiji Outer Market"],
+      "plans": ["Tokyo Cultural Dive", "Japan Golden Route"]
+    }
+  },
+  "plans": [
+    {
+      "name": "Swiss Alps Winter Retreat",
+      "image": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80",
+      "description": "Immerse yourself in the snowy peaks of Switzerland. Includes premium chalet stay, ski passes, and guided tours.",
+      "price": 150000,
+      "duration": "5 Days / 4 Nights",
+      "place": "swiss-alps"
+    }
+  ],
+  "offers": [
+    {
+      "name": "Maldives Luxury Escape",
+      "image": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=800&q=80",
+      "price": 85000,
+      "tag": "25% OFF",
+      "place": "maldives"
+    }
+  ],
+  "users": [
+    { "email": "admin@traveloop.in", "password": "admin@traveloop", "role": "admin" }
+  ],
+  "bookings": []
+}

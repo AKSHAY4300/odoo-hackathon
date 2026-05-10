@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Traveloop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .booking-section {
+            padding: 8rem 5% 4rem;
+            background-color: var(--bg-white);
+        }
+        .booking-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+        }
+        .booking-container h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .booking-container p.subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            background-color: #28a745; /* green for proceed */
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+        .radio-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        #custom-place-group {
+            display: none;
+            margin-top: 10px;
+        }
+        .tourist-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+            margin-bottom: 1rem;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Traveloop Logo" class="nav-logo-img">
+            <span>Traveloop</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="plans.html">New Plans</a>
+            <a href="offers.html">Offers</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="plans.html" class="btn btn-outline">Explore Plans</a>
+            <a href="login.html" class="btn btn-primary">Sign In</a>
+        </div>
+    </header>
+
+    <section class="booking-section">
+        <div class="booking-container">
+            <h1>Complete Your Booking</h1>
+            <p class="subtitle">Please provide your travel details below to proceed.</p>
+            
+            <form id="booking-form" action="payment.html" method="GET">
+                
+                <div class="form-group">
+                    <label for="destination">Select Destination</label>
+                    <select id="destination" name="destination" class="form-control" required>
+                        <option value="" disabled selected>-- Choose a Place --</option>
+                        <option value="Paris">Paris, France</option>
+                        <option value="Tokyo">Tokyo, Japan</option>
+                        <option value="Rome">Rome, Italy</option>
+                        <option value="New York">New York City, USA</option>
+                        <option value="Maldives">Malé, Maldives</option>
+                        <option value="Sydney">Sydney, Australia</option>
+                        <option value="Swiss Alps">Swiss Alps, Switzerland</option>
+                        <option value="Banff">Banff, Canada</option>
+                        <option value="custom">Other (Custom Destination)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="custom-place-group">
+                    <label for="custom-destination">Enter Custom Destination</label>
+                    <input type="text" id="custom-destination" name="custom-destination" class="form-control" placeholder="e.g. Santorini, Greece">
+                </div>
+
+                <div class="form-group">
+                    <label for="num-tourists">Number of Tourists</label>
+                    <input type="number" id="num-tourists" name="num-tourists" class="form-control" min="1" max="20" value="1" required>
+                </div>
+                
+                <div id="tourists-container">
+                    <!-- Dynamic tourist fields injected here -->
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Primary Contact Address</label>
+                    <textarea id="address" name="address" class="form-control" rows="2" placeholder="Full residential address" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you require a local guide?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="guide" value="yes" required> Yes, include a local guide</label>
+                        <label><input type="radio" name="guide" value="no"> No, we will explore independently</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-btn"><i class="fa-solid fa-lock"></i> Proceed to Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-col">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Traveloop" class="nav-logo-img">
+                    <span class="footer-logo-text">Traveloop</span>
+                </div>
+                <p class="tagline">Plan. Explore. Experience.</p>
+                <p class="description">India's premier travel planning platform — building the next generation of
+                    seamless multi-city itineraries.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="places.html">Destinations</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>+91 9876543210</p>
+                <p>+91 8765432109</p>
+                <p><a href="mailto:hello@traveloop.in">hello@traveloop.in</a></p>
+                <p>Traveloop HQ, Tech Park Campus,<br>Bangalore - 560001, Karnataka</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traveloop. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <!-- WhatsApp Floating Button -->
+        <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Toggle Custom Destination Input
+        const destSelect = document.getElementById('destination');
+        const customGroup = document.getElementById('custom-place-group');
+        const customInput = document.getElementById('custom-destination');
+
+        destSelect.addEventListener('change', function() {
+            if(this.value === 'custom') {
+                customGroup.style.display = 'block';
+                customInput.setAttribute('required', 'required');
+            } else {
+                customGroup.style.display = 'none';
+                customInput.removeAttribute('required');
+            }
+        });
+
+        // Pre-select destination if passed in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const placeParam = urlParams.get('place');
+        
+        if (placeParam) {
+            // Map the URL param back to the select option text if possible
+            const mapping = {
+                'paris': 'Paris',
+                'tokyo': 'Tokyo',
+                'rome': 'Rome',
+                'new-york': 'New York',
+                'maldives': 'Maldives',
+                'sydney': 'Sydney',
+                'swiss-alps': 'Swiss Alps',
+                'banff': 'Banff'
+            };
+            
+            if (mapping[placeParam]) {
+                destSelect.value = mapping[placeParam];
+            } else {
+                destSelect.value = 'custom';
+                customGroup.style.display = 'block';
+                customInput.value = placeParam;
+                customInput.setAttribute('required', 'required');
+            }
+        }
+
+        // Dynamic Tourist Fields
+        const numTouristsInput = document.getElementById('num-tourists');
+        const touristsContainer = document.getElementById('tourists-container');
+
+        function renderTouristFields() {
+            let num = parseInt(numTouristsInput.value) || 1;
+            if (num < 1) num = 1;
+            if (num > 20) num = 20;
+            
+            let html = '<h3 style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 10px;">Traveler Details</h3>';
+            for(let i = 1; i <= num; i++) {
+                html += `
+                    <div class="tourist-row">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Tourist ${i} Full Name</label>
+                            <input type="text" name="tourist-${i}-name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Age</label>
+                            <input type="number" name="tourist-${i}-age" class="form-control" placeholder="e.g. 30" min="1" max="120" required>
+                        </div>
+                    </div>
+                `;
+            }
+            touristsContainer.innerHTML = html;
+        }
+
+        numTouristsInput.addEventListener('input', renderTouristFields);
+        
+        // Initial render
+        renderTouristFields();
+
+        // Handle Form Submission - Save to Server
+        const bookingForm = document.getElementById('booking-form');
+        bookingForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Gather traveler data
+            const tourists = [];
+            const num = parseInt(numTouristsInput.value) || 1;
+            for(let i=1; i<=num; i++) {
+                tourists.push({
+                    name: document.getElementsByName(`tourist-${i}-name`)[0].value,
+                    age: document.getElementsByName(`tourist-${i}-age`)[0].value
+                });
+            }
+
+            const bookingData = {
+                destination: destSelect.value,
+                numTourists: num,
+                tourists: tourists,
+                address: document.getElementById('address').value,
+                guide: document.querySelector('input[name="guide"]:checked').value,
+                timestamp: new Date().toISOString()
+            };
+
+            // Save to Server
+            const res = await apiFetch('/bookings', {
+                method: 'POST',
+                body: JSON.stringify(bookingData)
+            });
+
+            if (res && res.success) {
+                showToast('Booking details saved. Redirecting to payment...', 'success');
+                setTimeout(() => {
+                    // Proceed to payment with URL params
+                    const params = new URLSearchParams();
+                    params.append('destination', bookingData.destination);
+                    params.append('tourists', num);
+                    params.append('guide', bookingData.guide);
+                    window.location.href = `payment.html?${params.toString()}`;
+                }, 1500);
+            } else {
+                showToast('Failed to save booking. Please try again.', 'error');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveloop - India's Best Travel Plans</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Traveloop Logo" class="nav-logo-img">
+            <span>Traveloop</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="places.html">Places</a>
+            <a href="plans.html">New Plans</a>
+            <a href="offers.html">Offers</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="plans.html" class="btn btn-outline">Explore Plans</a>
+            <a href="login.html" class="btn btn-primary">Sign In</a>
+        </div>
+    </header>
+
+    <!-- Landing Page / Hero Section -->
+    <section class="hero" id="home">
+        <!-- The user requested l1.png as the landing page hero image/banner -->
+        <div class="hero-bg">
+            <img src="l1.png" alt="Landing Page Banner" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Your Next Great Adventure Awaits</h1>
+            <p>Plan, organize, and experience the world with customized multi-city itineraries, budget tracking, and
+                real-time activity discovery.</p>
+            <div class="hero-buttons">
+                <a href="plans.html" class="btn btn-primary btn-large">Explore Plans</a>
+                <a href="login.html" class="btn btn-outline-light btn-large">Sign In</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section lite-bg" id="features">
+        <div class="container">
+            <h2 class="section-title">App Features</h2>
+            <p class="section-subtitle">Discover what makes Traveloop the ultimate travel companion.</p>
+            <div class="grid-6">
+                <div class="feature-card">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3>Multi-City Itineraries</h3>
+                    <p>Build complex, day-by-day travel plans connecting multiple destinations seamlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-wallet"></i>
+                    <h3>Budget Tracking</h3>
+                    <p>Get real-time cost breakdowns for flights, hotels, food, and activities.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h3>Visual Calendars</h3>
+                    <p>View your entire trip on a beautiful interactive timeline and calendar.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Public Sharing</h3>
+                    <p>Share your trips with friends or make them public to inspire other travelers.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Packing Checklists</h3>
+                    <p>Never forget essentials with smart, categorised packing lists.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-compass"></i>
+                    <h3>Activity Discovery</h3>
+                    <p>Find top-rated hidden gems, food tours, and adventure sports instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Plans Preview Section -->
+    <section class="section" id="plans">
+        <div class="container">
+            <h2 class="section-title">Curated Itineraries</h2>
+            <p class="section-subtitle">Ready-to-book, expertly structured plans for your next big adventure.</p>
+            <div class="grid-3">
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div style="font-size: 0.85rem; color: #005691; font-weight: 600; margin-bottom: 10px;"><i class="fa-regular fa-clock"></i> 5 Days / 4 Nights</div>
+                        <h3>Swiss Alps Winter Retreat</h3>
+                        <p>Immerse yourself in the snowy peaks of Switzerland. Includes premium chalet stay, ski passes, and guided tours.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">₹1,50,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=swiss-alps" class="btn btn-primary btn-small mt-2" style="width: 100%; text-align: center;">View Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div style="font-size: 0.85rem; color: #005691; font-weight: 600; margin-bottom: 10px;"><i class="fa-regular fa-clock"></i> 7 Days / 6 Nights</div>
+                        <h3>Royal Rajasthan Heritage</h3>
+                        <p>Explore the majestic forts, palaces, and deserts of Jaipur, Jodhpur, and Udaipur in absolute royal luxury.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">₹45,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=rajasthan" class="btn btn-primary btn-small mt-2" style="width: 100%; text-align: center;">View Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div style="font-size: 0.85rem; color: #005691; font-weight: 600; margin-bottom: 10px;"><i class="fa-regular fa-clock"></i> 4 Days / 3 Nights</div>
+                        <h3>Kerala Backwaters Escape</h3>
+                        <p>Relax in a private houseboat traversing the serene backwaters of Alleppey. Meals and Ayurvedic spa included.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">₹32,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=kerala" class="btn btn-primary btn-small mt-2" style="width: 100%; text-align: center;">View Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="plans.html" class="btn btn-primary mt-2">Explore All Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Offers Section -->
+    <section class="section lite-bg" id="offers">
+        <div class="container">
+            <h2 class="section-title">Best Offer Priced Trips</h2>
+            <p class="section-subtitle">Grab our limited-time curated itineraries at unbeatable prices.</p>
+            <div class="grid-3">
+                <div class="trip-card">
+                    <div class="trip-img bali"></div>
+                    <div class="trip-content">
+                        <div class="trip-tag">20% OFF</div>
+                        <h3>Bali Bliss 7-Day Tour</h3>
+                        <p>Experience the serene beaches, vibrant culture, and lush temples of Bali.</p>
+                        <div class="trip-footer">
+                            <span class="price"><strike>₹96,000</strike> ₹76,800</span>
+                            <a href="place-details.html?place=bali" class="btn btn-primary btn-small">View Trip</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="trip-card">
+                    <div class="trip-img swiss"></div>
+                    <div class="trip-content">
+                        <div class="trip-tag">HOT DEAL</div>
+                        <h3>Swiss Alps Adventure</h3>
+                        <p>5 days of skiing, hot chocolate, and breathtaking alpine panoramic views.</p>
+                        <div class="trip-footer">
+                            <span class="price"><strike>₹2,00,000</strike> ₹1,59,900</span>
+                            <a href="place-details.html?place=swiss-alps" class="btn btn-primary btn-small">View Trip</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="trip-card">
+                    <div class="trip-img thai"></div>
+                    <div class="trip-content">
+                        <div class="trip-tag">BEST SELLER</div>
+                        <h3>Thailand Island Hopping</h3>
+                        <p>10 days exploring Phuket, Krabi, and Phi Phi with luxury speedboat transfers.</p>
+                        <div class="trip-footer">
+                            <span class="price"><strike>₹1,20,000</strike> ₹1,00,000</span>
+                            <a href="place-details.html?place=thailand" class="btn btn-primary btn-small">View Trip</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="offers.html" class="btn btn-primary mt-2">View All Offers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Places Preview Section -->
+    <section class="section" id="popular">
+        <div class="container">
+            <h2 class="section-title">Popular Places</h2>
+            <p class="section-subtitle">Explore the most loved destinations by our travelers.</p>
+            <div class="grid-4">
+                <a href="place-details.html?place=paris" class="place-card" style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=600&q=80" alt="Paris">
+                    <div class="place-info">
+                        <h4>Paris, France</h4>
+                        <p>City of light, love, and iconic landmarks.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=tokyo" class="place-card" style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80" alt="Tokyo">
+                    <div class="place-info">
+                        <h4>Tokyo, Japan</h4>
+                        <p>A dazzling mix of neon-lit skyscrapers and historic traditional temples.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=rome" class="place-card" style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=600&q=80" alt="Rome">
+                    <div class="place-info">
+                        <h4>Rome, Italy</h4>
+                        <p>Walk through ancient history.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=new-york" class="place-card" style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=80" alt="New York">
+                    <div class="place-info">
+                        <h4>New York City, USA</h4>
+                        <p>The city that never sleeps.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center mt-3">
+                <a href="places.html" class="btn btn-primary mt-2">View All Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section removed to login.html -->
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-col">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Traveloop" class="nav-logo-img">
+                    <span class="footer-logo-text">Traveloop</span>
+                </div>
+                <p class="tagline">Plan. Explore. Experience.</p>
+                <p class="description">India's premier travel planning platform — building the next generation of
+                    seamless multi-city itineraries.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="places.html">Destinations</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>+91 9876543210</p>
+                <p>+91 8765432109</p>
+                <p><a href="mailto:hello@traveloop.in">hello@traveloop.in</a></p>
+                <p>Traveloop HQ, Tech Park Campus,<br>Bangalore - 560001, Karnataka</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traveloop. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <!-- WhatsApp Floating Button -->
+        <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

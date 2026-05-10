@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curated Plans - Traveloop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .plan-duration {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        .plan-price-large {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .plan-btn {
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Traveloop Logo" class="nav-logo-img">
+            <span>Traveloop</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="plans.html" class="active-link">New Plans</a>
+            <a href="offers.html">Offers</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="plans.html" class="btn btn-outline">Explore Plans</a>
+            <a href="login.html" class="btn btn-primary">Sign In</a>
+        </div>
+    </header>
+
+    <div class="page-header" style="background: linear-gradient(rgba(0, 86, 145, 0.7), rgba(0, 86, 145, 0.9)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+        <div>
+            <h1>Expertly Curated Plans</h1>
+            <p>Ready-to-book, perfectly structured itineraries for your next big adventure.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-3">
+                <!-- Plan 1 -->
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div class="plan-duration"><i class="fa-regular fa-clock"></i> 5 Days / 4 Nights</div>
+                        <h3>Swiss Alps Winter Retreat</h3>
+                        <p>Immerse yourself in the snowy peaks of Switzerland. Includes premium chalet stay, ski passes, and guided tours.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span class="plan-price-large">₹1,50,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=swiss-alps" class="btn btn-primary plan-btn">View Detailed Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div class="plan-duration"><i class="fa-regular fa-clock"></i> 7 Days / 6 Nights</div>
+                        <h3>Royal Rajasthan Heritage</h3>
+                        <p>Explore the majestic forts, palaces, and deserts of Jaipur, Jodhpur, and Udaipur in absolute royal luxury.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span class="plan-price-large">₹45,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=rajasthan" class="btn btn-primary plan-btn">View Detailed Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div class="plan-duration"><i class="fa-regular fa-clock"></i> 4 Days / 3 Nights</div>
+                        <h3>Kerala Backwaters Escape</h3>
+                        <p>Relax in a private houseboat traversing the serene backwaters of Alleppey. Meals and Ayurvedic spa included.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span class="plan-price-large">₹32,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=kerala" class="btn btn-primary plan-btn">View Detailed Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 4 -->
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div class="plan-duration"><i class="fa-regular fa-clock"></i> 10 Days / 9 Nights</div>
+                        <h3>EuroTrip: The Classic Route</h3>
+                        <p>A comprehensive backpacking journey spanning Amsterdam, Berlin, Prague, and Budapest with train passes included.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span class="plan-price-large">₹2,10,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=eurotrip" class="btn btn-primary plan-btn">View Detailed Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 5 -->
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1564507592224-2fc10c80655c?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div class="plan-duration"><i class="fa-regular fa-clock"></i> 6 Days / 5 Nights</div>
+                        <h3>India's Golden Triangle</h3>
+                        <p>A fast-paced cultural immersion connecting Delhi, Agra, and Jaipur. See the Taj Mahal at sunrise.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span class="plan-price-large">₹28,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=golden-triangle" class="btn btn-primary plan-btn">View Detailed Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 6 -->
+                <div class="trip-card">
+                    <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="trip-content">
+                        <div class="plan-duration"><i class="fa-regular fa-clock"></i> 5 Days / 4 Nights</div>
+                        <h3>Magical Bali Experience</h3>
+                        <p>Experience the perfect blend of Ubud's spiritual tranquility and Seminyak's beach vibes.</p>
+                        <div class="trip-footer" style="flex-direction: column; align-items: flex-start; padding-top: 1.5rem;">
+                            <span class="plan-price-large">₹65,000 <span style="font-size: 0.8rem; font-weight: normal; color: #666;">/ person</span></span>
+                            <a href="place-details.html?place=bali" class="btn btn-primary plan-btn">View Detailed Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-col">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Traveloop" class="nav-logo-img">
+                    <span class="footer-logo-text">Traveloop</span>
+                </div>
+                <p class="tagline">Plan. Explore. Experience.</p>
+                <p class="description">India's premier travel planning platform — building the next generation of
+                    seamless multi-city itineraries.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="places.html">Destinations</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>+91 9876543210</p>
+                <p>+91 8765432109</p>
+                <p><a href="mailto:hello@traveloop.in">hello@traveloop.in</a></p>
+                <p>Traveloop HQ, Tech Park Campus,<br>Bangalore - 560001, Karnataka</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traveloop. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <!-- WhatsApp Floating Button -->
+        <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

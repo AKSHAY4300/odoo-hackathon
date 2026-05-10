@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Traveloop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../client/logo.png" alt="Traveloop Logo" style="height: 35px; width: auto;">
+            <h2 style="color: white;">Traveloop <span style="font-size: 0.8rem; color: #a0aec0;">Admin</span></h2>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#" class="nav-item active" data-target="dashboard"><i class="fa-solid fa-chart-pie"></i>
+                    Dashboard</a></li>
+            <li><a href="#" class="nav-item" data-target="add-places"><i class="fa-solid fa-map-location-dot"></i> Add
+                    Places Options</a></li>
+            <li><a href="#" class="nav-item" data-target="add-plans"><i class="fa-solid fa-list-check"></i> Add Plan
+                    Options</a></li>
+            <li><a href="#" class="nav-item" data-target="add-offers"><i class="fa-solid fa-tags"></i> Add Offers
+                    Options</a></li>
+
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <div class="search-bar">
+                <i class="fa-solid fa-search" style="color: #aaa;"></i>
+                <input type="text" placeholder="Search..." style="border:none; outline:none; margin-left:10px;">
+            </div>
+            <div class="user-profile" id="profile-trigger" style="cursor: pointer;">
+                <i class="fa-regular fa-bell" style="margin-right: 15px; font-size: 1.2rem; color: #666;"></i>
+                <div
+                    style="width:35px; height:35px; background:#005691; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+                    A</div>
+                <span>Admin User</span>
+            </div>
+        </header>
+
+        <!-- Dashboard View -->
+        <div id="dashboard" class="view-section active">
+            <h1 class="page-title">Analytics Overview</h1>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon bg-primary"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-info">
+                        <h4>Total Users</h4>
+                        <h2>12,450</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-success"><i class="fa-solid fa-suitcase-rolling"></i></div>
+                    <div class="stat-info">
+                        <h4>Trips Created</h4>
+                        <h2>8,320</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-warning"><i class="fa-solid fa-globe"></i></div>
+                    <div class="stat-info">
+                        <h4>Top City (Paris)</h4>
+                        <h2>1,205 <span style="font-size:0.8rem; color:#666;">visits</span></h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-danger"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="stat-info">
+                        <h4>Engagement</h4>
+                        <h2>+24%</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-grid">
+                <!-- Bar Chart for Trips Created -->
+                <div class="chart-card">
+                    <h3>Trips Created (Monthly Trend)</h3>
+                    <div class="css-bar-chart">
+                        <div class="bar" style="height: 40%;"><span>Jan</span></div>
+                        <div class="bar" style="height: 50%;"><span>Feb</span></div>
+                        <div class="bar" style="height: 35%;"><span>Mar</span></div>
+                        <div class="bar" style="height: 60%;"><span>Apr</span></div>
+                        <div class="bar" style="height: 85%;"><span>May</span></div>
+                        <div class="bar" style="height: 70%;"><span>Jun</span></div>
+                        <div class="bar" style="height: 95%;"><span>Jul</span></div>
+                    </div>
+                </div>
+                <!-- Progress Bars for Popular Regions -->
+                <div class="chart-card">
+                    <h3>Popular Regions</h3>
+                    <ul class="region-list">
+                        <li class="region-item">
+                            <div class="region-name"><span>Europe</span> <span>45%</span></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 45%;"></div>
+                            </div>
+                        </li>
+                        <li class="region-item">
+                            <div class="region-name"><span>South East Asia</span> <span>30%</span></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 30%; background-color: var(--success);"></div>
+                            </div>
+                        </li>
+                        <li class="region-item">
+                            <div class="region-name"><span>North America</span> <span>15%</span></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 15%; background-color: var(--warning);"></div>
+                            </div>
+                        </li>
+                        <li class="region-item">
+                            <div class="region-name"><span>Middle East</span> <span>10%</span></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 10%; background-color: var(--danger);"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recent Users Table -->
+            <div class="table-container">
+                <h3 style="margin-bottom: 15px; font-family: 'Outfit', sans-serif;">Recent User Registrations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Trips Planned</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1042</td>
+                            <td>Rahul Sharma</td>
+                            <td>rahul.s@example.com</td>
+                            <td>3</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="action-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>#1043</td>
+                            <td>Priya Patel</td>
+                            <td>priya.p@example.com</td>
+                            <td>1</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="action-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>#1044</td>
+                            <td>Amit Kumar</td>
+                            <td>amit.k@example.com</td>
+                            <td>0</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td><button class="action-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>#1045</td>
+                            <td>Sneha Gupta</td>
+                            <td>sneha.g@example.com</td>
+                            <td>5</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="action-btn">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Add Places View -->
+        <div id="add-places" class="view-section">
+            <h1 class="page-title">Add Places Options</h1>
+            <p style="margin-bottom: 20px; color: #666;">Add a new destination to feature on the client website.</p>
+
+            <div class="form-container">
+                <form id="form-add-place">
+                    <div class="form-group">
+                        <label for="place-name">Name of the Place</label>
+                        <input type="text" id="place-name" placeholder="e.g. Paris, France" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="place-image">Image URL</label>
+                        <input type="url" id="place-image" placeholder="https://example.com/image.jpg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="place-desc">Description</label>
+                        <textarea id="place-desc" placeholder="Write a short description about this place..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit"><i class="fa-solid fa-plus"></i> Add Place</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add Plans View -->
+        <div id="add-plans" class="view-section">
+            <h1 class="page-title">Add Plan Options</h1>
+            <p style="margin-bottom: 20px; color: #666;">Create a new curated trip plan/offer for the client website.
+            </p>
+
+            <div class="form-container">
+                <form id="form-add-plan">
+                    <div class="form-group">
+                        <label for="plan-name">Name of the Plan</label>
+                        <input type="text" id="plan-name" placeholder="e.g. Bali Bliss 7-Day Tour" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan-image">Cover Image URL</label>
+                        <input type="url" id="plan-image" placeholder="https://example.com/image.jpg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan-details">Plan Details / Description</label>
+                        <textarea id="plan-details" placeholder="Describe the itinerary and what is included..."
+                            required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan-price">Price (₹)</label>
+                        <input type="number" id="plan-price" placeholder="e.g. 96000" required>
+                    </div>
+                    <button type="submit" class="btn-submit"><i class="fa-solid fa-plus"></i> Add Plan</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add Offers View -->
+        <div id="add-offers" class="view-section">
+            <h1 class="page-title">Add Offers Options</h1>
+            <p style="margin-bottom: 20px; color: #666;">Promote a destination with a special discount to show on the
+                client website.</p>
+
+            <div class="form-container">
+                <form id="form-add-offer">
+                    <div class="form-group">
+                        <label for="offer-name">Name of the Place / Trip</label>
+                        <input type="text" id="offer-name" placeholder="e.g. Swiss Alps Adventure" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="offer-image">Image URL</label>
+                        <input type="url" id="offer-image" placeholder="https://example.com/image.jpg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="offer-price">Special Offer Price (₹)</label>
+                        <input type="number" id="offer-price" placeholder="e.g. 76800" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="offer-tag">Offer Tag (Optional)</label>
+                        <input type="text" id="offer-tag" placeholder="e.g. 20% OFF, HOT DEAL">
+                    </div>
+                    <button type="submit" class="btn-submit"><i class="fa-solid fa-tags"></i> Add Offer</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Profile Modal -->
+    <div class="modal-overlay" id="profile-modal">
+        <div class="profile-modal">
+            <div class="modal-header">
+                <h3>User Profile</h3>
+                <i class="fa-solid fa-xmark close-modal" id="close-profile"></i>
+            </div>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <div style="width:80px; height:80px; background:#005691; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size: 2.5rem; margin: 0 auto 10px;">A</div>
+                <h4 style="font-family: 'Outfit', sans-serif;">Admin User</h4>
+                <span style="font-size: 0.85rem; color: #666;">Administrator</span>
+            </div>
+            <div class="profile-info-group">
+                <label>Email ID</label>
+                <div class="info-value">admin@traveloop.in</div>
+            </div>
+            <div class="profile-info-group">
+                <label>Mobile Number</label>
+                <div class="info-value">+91 9876543210</div>
+            </div>
+            <div class="profile-info-group">
+                <label>Password</label>
+                <div class="info-value" style="letter-spacing: 2px;">••••••••••••</div>
+            </div>
+            <button class="btn-change-password">Change Password</button>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching logic for Admin Dashboard
+        const navItems = document.querySelectorAll('.nav-item');
+        const viewSections = document.querySelectorAll('.view-section');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function (e) {
+                // If it doesn't have a data-target, do nothing (mocking link)
+                if (!this.dataset.target) return;
+
+                e.preventDefault();
+
+                // Remove active from all tabs
+                navItems.forEach(nav => nav.classList.remove('active'));
+                viewSections.forEach(section => section.classList.remove('active'));
+
+                // Add active to clicked tab
+                this.classList.add('active');
+
+                // Show corresponding section
+                const targetId = this.dataset.target;
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // Toast Notification System
+        const showToast = (message, type = 'info') => {
+            let container = document.querySelector('.toast-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'toast-container';
+                document.body.appendChild(container);
+            }
+
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+
+            let icon = 'fa-circle-info';
+            if (type === 'success') icon = 'fa-circle-check';
+            if (type === 'error') icon = 'fa-circle-exclamation';
+            if (type === 'warning') icon = 'fa-triangle-exclamation';
+
+            toast.innerHTML = `
+            <i class="fa-solid ${icon}"></i>
+            <div class="toast-content">${message}</div>
+        `;
+
+            container.appendChild(toast);
+
+            // Auto remove
+            setTimeout(() => {
+                toast.classList.add('hide');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        };
+
+        // API Configuration
+        const API_BASE_URL = 'http://localhost:3000/api';
+
+        const apiFetch = async (endpoint, options = {}) => {
+            try {
+                const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+                    ...options,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        ...options.headers
+                    }
+                });
+                return await response.json();
+            } catch (error) {
+                console.error('API Error:', error);
+                showToast('Server connection failed.', 'error');
+                return null;
+            }
+        };
+
+        // Load Real Bookings
+        async function loadBookings() {
+            const bookings = await apiFetch('/bookings');
+            if (!bookings) return;
+
+            const tbody = document.querySelector('.orders-table tbody');
+            if (bookings.length > 0) {
+                tbody.innerHTML = '';
+                bookings.forEach(booking => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>#${booking.id.toString().slice(-4)}</td>
+                        <td>${booking.destination}</td>
+                        <td>${booking.tourists[0]?.name || 'N/A'}</td>
+                        <td>${booking.tourists.length}</td>
+                        <td><span class="status-badge status-active">Confirmed</span></td>
+                        <td><button class="action-btn">View</button></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+        }
+
+        // Initial Load
+        loadBookings();
+
+        // Update counts (mock but from real data length)
+        async function updateStats() {
+            const bookings = await apiFetch('/bookings') || [];
+            const places = await apiFetch('/places') || {};
+            // You could update some stat numbers here if you have them in the UI
+        }
+        updateStats();
+
+        // Mock form submissions - Updated for real API
+        document.getElementById('form-add-place').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('place-name').value,
+                image: document.getElementById('place-image').value,
+                description: document.getElementById('place-desc').value
+            };
+
+            const res = await apiFetch('/places', {
+                method: 'POST',
+                body: JSON.stringify(data)
+            });
+
+            if (res && res.success) {
+                showToast('Place successfully saved to server!', 'success');
+                this.reset();
+            } else {
+                showToast('Failed to save place. Check server.', 'error');
+            }
+        });
+
+        document.getElementById('form-add-plan').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('plan-name').value,
+                image: document.getElementById('plan-image').value,
+                description: document.getElementById('plan-details').value,
+                price: document.getElementById('plan-price').value
+            };
+
+            const res = await apiFetch('/plans', {
+                method: 'POST',
+                body: JSON.stringify(data)
+            });
+
+            if (res && res.success) {
+                showToast('New plan successfully saved to server!', 'success');
+                this.reset();
+            } else {
+                showToast('Failed to save plan. Check server.', 'error');
+            }
+        });
+
+        document.getElementById('form-add-offer').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('offer-name').value,
+                image: document.getElementById('offer-image').value,
+                price: document.getElementById('offer-price').value,
+                tag: document.getElementById('offer-tag').value
+            };
+
+            const res = await apiFetch('/offers', {
+                method: 'POST',
+                body: JSON.stringify(data)
+            });
+
+            if (res && res.success) {
+                showToast('Special offer successfully saved to server!', 'success');
+                this.reset();
+            } else {
+                showToast('Failed to save offer. Check server.', 'error');
+            }
+        });
+
+        // Profile Modal Logic
+        const profileTrigger = document.getElementById('profile-trigger');
+        const profileModal = document.getElementById('profile-modal');
+        const closeProfile = document.getElementById('close-profile');
+
+        profileTrigger.addEventListener('click', () => {
+            profileModal.classList.add('active');
+        });
+
+        closeProfile.addEventListener('click', () => {
+            profileModal.classList.remove('active');
+        });
+
+        profileModal.addEventListener('click', (e) => {
+            if (e.target === profileModal) {
+                profileModal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

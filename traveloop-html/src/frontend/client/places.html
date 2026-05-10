@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Places - Traveloop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Traveloop Logo" class="nav-logo-img">
+            <span>Traveloop</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="places.html" class="active-link">Places</a>
+            <a href="plans.html">New Plans</a>
+            <a href="offers.html">Offers</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="plans.html" class="btn btn-outline">Explore Plans</a>
+            <a href="login.html" class="btn btn-primary">Sign In</a>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div>
+            <h1>Explore The World</h1>
+            <p>Discover top-rated destinations to add to your next itinerary.</p>
+        </div>
+    </div>
+
+    <!-- Expanded Popular Places Section -->
+    <section class="section lite-bg">
+        <div class="container">
+            <h2 class="section-title">Discover Our Top Destinations</h2>
+            <p class="section-subtitle">From serene beaches to bustling metropolitan cities, your perfect getaway is
+                just a click away.</p>
+
+            <div class="text-center" style="margin-bottom: 2rem;" id="filter-buttons">
+                <button class="btn btn-primary filter-btn" data-filter="all" style="margin: 0 5px;">All</button>
+                <button class="btn btn-outline filter-btn" data-filter="beach" style="margin: 0 5px;">Beaches</button>
+                <button class="btn btn-outline filter-btn" data-filter="mountain"
+                    style="margin: 0 5px;">Mountains</button>
+                <button class="btn btn-outline filter-btn" data-filter="city" style="margin: 0 5px;">City Life</button>
+            </div>
+
+            <div class="grid-4 gap-2" id="places-grid">
+                <a href="place-details.html?place=paris" class="place-card" data-category="city"
+                    style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=600&q=80"
+                        alt="Paris">
+                    <div class="place-info">
+                        <h4>Paris, France</h4>
+                        <p>City of light, love, and iconic landmarks like the Eiffel Tower and Louvre.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=tokyo" class="place-card" data-category="city"
+                    style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80"
+                        alt="Tokyo">
+                    <div class="place-info">
+                        <h4>Tokyo, Japan</h4>
+                        <p>A dazzling mix of neon-lit skyscrapers and historic traditional temples.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=rome" class="place-card" data-category="city"
+                    style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=600&q=80"
+                        alt="Rome">
+                    <div class="place-info">
+                        <h4>Rome, Italy</h4>
+                        <p>Walk through ancient history with the Colosseum, Pantheon, and exquisite pasta.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=new-york" class="place-card" data-category="city"
+                    style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=80"
+                        alt="New York">
+                    <div class="place-info">
+                        <h4>New York City, USA</h4>
+                        <p>The city that never sleeps, featuring Broadway, Central Park, and endless energy.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=maldives" class="place-card" data-category="beach"
+                    style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=600&q=80"
+                        alt="Maldives">
+                    <div class="place-info">
+                        <h4>Malé, Maldives</h4>
+                        <p>Crystal clear waters and stunning overwater bungalows for ultimate relaxation.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=sydney" class="place-card" data-category="beach"
+                    style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&q=80"
+                        alt="Sydney">
+                    <div class="place-info">
+                        <h4>Sydney, Australia</h4>
+                        <p>Famous for its Sydney Opera House, Harbour Bridge, and pristine beaches.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=swiss-alps" class="place-card" data-category="mountain"
+                    style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=600&q=80"
+                        alt="Swiss Alps">
+                    <div class="place-info">
+                        <h4>Swiss Alps, Switzerland</h4>
+                        <p>Snow-capped peaks, alpine villages, and world-class skiing resorts.</p>
+                    </div>
+                </a>
+                <a href="place-details.html?place=banff" class="place-card" data-category="mountain"
+                    style="display: block; text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=600&q=80"
+                        alt="Banff">
+                    <div class="place-info">
+                        <h4>Banff, Canada</h4>
+                        <p>Breathtaking mountain lakes, glaciers, and abundant wildlife.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-col">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Traveloop" class="nav-logo-img">
+                    <span class="footer-logo-text">Traveloop</span>
+                </div>
+                <p class="tagline">Plan. Explore. Experience.</p>
+                <p class="description">India's premier travel planning platform — building the next generation of
+                    seamless multi-city itineraries.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="places.html">Destinations</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>+91 9876543210</p>
+                <p>+91 8765432109</p>
+                <p><a href="mailto:hello@traveloop.in">hello@traveloop.in</a></p>
+                <p>Traveloop HQ, Tech Park Campus,<br>Bangalore - 560001, Karnataka</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traveloop. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <!-- WhatsApp Floating Button -->
+        <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        async function loadPlaces() {
+            const places = await apiFetch('/places');
+            if (!places) return;
+
+            const grid = document.getElementById('places-grid');
+            grid.innerHTML = '';
+
+            Object.entries(places).forEach(([id, place]) => {
+                const card = document.createElement('a');
+                card.href = `place-details.html?place=${id}`;
+                card.className = 'place-card';
+                card.setAttribute('data-category', 'all'); // Could be more dynamic
+                card.style.display = 'block';
+                card.style.textDecoration = 'none';
+                card.style.color = 'inherit';
+
+                card.innerHTML = `
+                    <img src="${place.images[0]}" alt="${place.name}">
+                    <div class="place-info">
+                        <h4>${place.name}</h4>
+                        <p>${place.description.substring(0, 100)}...</p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        loadPlaces();
+    </script>
+</body>
+
+</html>
